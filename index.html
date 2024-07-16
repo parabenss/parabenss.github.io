@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo em Tela Cheia</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+
+        function copyTextToClipboard() {
+            const texto = ".--. .- .-. .- -... . -. ... ... .-.-.- --. .. - .... ..- -... .-.-.- .. ---";
+
+            const textarea = document.createElement('textarea');
+            textarea.value = texto;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert("Ixi, tu copiou alguma coisa... 🤔😂");
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.body.addEventListener('click', copyTextToClipboard);
+        });
+    </script>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="videobg.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+</body>
+</html>
